@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import b2bitLogo from "assets/icons/b2bit-logo.png";
 import { Card, Button, Input, Label } from "styles/layout";
 import { useController } from "./controller";
 import { Controller, Form } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 export const LoginView: React.FC = () => {
-  const { form, handleFormSubmit, isLoading } = useController();
+  const { form, handleFormSubmit, isLoading, isAuthenticated } =
+    useController();
+
+  const navigate = useNavigate();
+  useEffect(() => {
+    isAuthenticated && navigate({ pathname: "/profile" }, { replace: true });
+  }, [isAuthenticated]);
 
   return (
     <main className="bg-base-200 h-screen w-screen flex items-center justify-center">
@@ -46,9 +53,7 @@ export const LoginView: React.FC = () => {
             )}
           />
 
-          <Button type="submit" className="w-full mt-4">
-            <p className="text-neutral">Sign In</p>
-          </Button>
+          <Button type="submit" className="w-full mt-4" text="Sign In"></Button>
         </Form>
       </Card>
     </main>

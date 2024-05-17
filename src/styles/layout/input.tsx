@@ -19,7 +19,10 @@ export const Input: React.FC<Props> = (props) => {
 
       <input
         {...props}
-        className={twMerge("input bg-base-100 p-3 text-sm", props.className)}
+        className={twMerge(
+          "input bg-base-100 p-3 font-nunito",
+          props.className
+        )}
       ></input>
 
       {props.error && (

@@ -7,6 +7,7 @@ export const RootRouter: React.FC = () => {
   return (
     <Routes>
       <Route path="/" element={<LoginRoute></LoginRoute>} />
+      <Route path="/login" element={<LoginRoute></LoginRoute>} />
       <Route path="/profile" element={<ProfileRoute></ProfileRoute>}></Route>
     </Routes>
   );

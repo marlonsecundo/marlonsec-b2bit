@@ -9,13 +9,15 @@ import { useNavigate } from "react-router-dom";
 
 export function useController() {
   const form = useForm<CreateLoginRequest>({
-    defaultValues: {},
+    defaultValues: {
+      email: "cliente@youdrive.com",
+      password: "password",
+    },
     resolver: joiResolver(createLoginSchema),
   });
 
   const { createLoginMutation } = useAuthMutation();
-  const { setAuthData } = useAuthContext();
-
+  const { setAuthData, isAuthenticated } = useAuthContext();
   const navigate = useNavigate();
 
   const handleFormSubmit: FormSubmitHandler<CreateLoginRequest> = async ({
@@ -24,11 +26,9 @@ export function useController() {
     const response = await createLoginMutation.mutateAsync(data);
 
     setAuthData(response.data);
-
-    navigate({ pathname: "/profile" }, { replace: true });
   };
 
   const isLoading = createLoginMutation.isPending;
 
-  return { isLoading, form, handleFormSubmit };
+  return { isLoading, form, handleFormSubmit, isAuthenticated };
 }

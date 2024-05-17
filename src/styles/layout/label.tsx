@@ -10,7 +10,10 @@ export const Label: React.FC<
   return (
     <label
       {...props}
-      className={twMerge("text-primary-content", props.className)}
+      className={twMerge(
+        "text-neutral-content font-nunito font-bold text-lg",
+        props.className
+      )}
     >
       {props.children}
     </label>

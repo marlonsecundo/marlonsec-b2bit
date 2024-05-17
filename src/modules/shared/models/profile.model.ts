@@ -5,9 +5,10 @@ export interface ProfileModel {
   id: string;
   avatar?: AvatarModel;
   name: string;
-  last_name: string;
   email: string;
-  role: RoleModel;
-  last_login: string;
-  staff_role: RoleModel;
+  role: string;
+  is_active: boolean;
+  type: string;
+  created: string;
+  modified: string;
 }

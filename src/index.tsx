@@ -6,6 +6,7 @@ import { RootRouter } from "./routes";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "modules/auth/context/auth.context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { UserAuthModel } from "modules/auth/models/user-auth.model";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,10 +16,19 @@ const queryClient = new QueryClient({
   defaultOptions: { queries: { refetchOnWindowFocus: false } },
 });
 
+const storageAuth = localStorage.getItem("userAuth");
+
+const userAuth = storageAuth
+  ? (JSON.parse(storageAuth) as UserAuthModel)
+  : undefined;
+
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <AuthProvider>
+      <AuthProvider
+        initialToken={userAuth?.tokens}
+        initialUser={userAuth?.user}
+      >
         <BrowserRouter>
           <RootRouter></RootRouter>
         </BrowserRouter>

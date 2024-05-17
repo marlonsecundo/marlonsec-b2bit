@@ -8,7 +8,7 @@ export const Card: React.FC<
     <div
       {...props}
       className={twMerge(
-        "bg-neutral shadow-card p-14 px-10 rounded-lg",
+        "bg-neutral shadow-card p-14 px-10 rounded-xl",
         props.className
       )}
     >
