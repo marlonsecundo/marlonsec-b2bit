@@ -4,12 +4,12 @@ import { useReadUserProfileQuery } from "modules/profile/queries/profile.query";
 export const useController = () => {
   const { user } = useAuthContext();
 
-  console.log({ user });
-
-  const { profile } = useReadUserProfileQuery({
+  const { profile, query } = useReadUserProfileQuery({
     enabled: user?.id !== undefined,
     params: {},
   });
 
-  return { profile };
+  const isLoading = query.isFetching;
+
+  return { profile, isLoading };
 };
