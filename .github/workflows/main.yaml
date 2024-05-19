@@ -35,7 +35,7 @@ jobs:
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
       - name: Debug - List contents of build directory
         run: |
-          ls -l ./build
+          ls -l ./
 
       - name: Upload files to S3
         run: |
