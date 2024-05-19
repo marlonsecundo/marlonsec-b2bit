@@ -9,7 +9,7 @@ export const Header: React.FC = () => {
   const { isAuthenticated } = controller;
 
   return (
-    <div className="absolute bg-neutral p-5 w-full flex justify-end top-0">
+    <div className="absolute bg-neutral p-5 w-full flex justify-end top-0 max-h-16">
       <div className="flex flex-1 flex-row">
         <ThemeSwitch></ThemeSwitch>
       </div>

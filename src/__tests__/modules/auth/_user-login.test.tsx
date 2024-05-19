@@ -1,4 +1,4 @@
-import "../../../__mocks__/api/_auth-api.mock";
+import "../../../../__mocks__/api/_auth-api.mock";
 import { ProvidersMock } from "../../../../__mocks__/_providers.mock";
 import { LoginView } from "@/modules/auth/views/login/login.view";
 import {
