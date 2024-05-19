@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Input } from "@/styles/layout";
+import { Card } from "@/styles/layout";
 import { useController } from "./controller";
 import { ProfileField } from "./ui/profile-field";
 import { Header } from "@/modules/shared/ui/header/header";
@@ -20,6 +20,7 @@ export const ProfileView: React.FC = () => {
 
             <WithSkeleton isLoading={isLoading} skeleton={profileImageSkeleton}>
               <img
+                alt="user profile"
                 className="max-w-[50%] rounded mt-1"
                 src={profile?.avatar?.low}
               ></img>

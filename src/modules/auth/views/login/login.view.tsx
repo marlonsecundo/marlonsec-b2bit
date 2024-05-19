@@ -4,7 +4,6 @@ import { useController } from "./controller";
 import { Controller, Form } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import b2bitLogo from "../../../../assets/icons/b2bit-logo.png";
-import alertSvg from "../../../../assets/icons/alert.svg";
 
 export const LoginView: React.FC = () => {
   const { form, handleFormSubmit, isLoading, isAuthenticated, error } =
@@ -19,7 +18,11 @@ export const LoginView: React.FC = () => {
   return (
     <main className="bg-base-200 h-screen w-screen flex items-center justify-center">
       <Card className="flex flex-col">
-        <img src={b2bitLogo} className="mx-6 self-center mb-10"></img>
+        <img
+          alt="b2bit-logo"
+          src={b2bitLogo}
+          className="mx-6 self-center mb-10"
+        ></img>
 
         {error && (
           <div role="alert" className="alert alert-warning rounded-sm mb-5">

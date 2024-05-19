@@ -1,6 +1,5 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
-import { Label } from "./label";
 
 interface Props
   extends React.DetailedHTMLProps<

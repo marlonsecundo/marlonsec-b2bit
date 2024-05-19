@@ -1,4 +1,4 @@
-import axios, { Axios, AxiosError } from "axios";
+import { AxiosError } from "axios";
 
 export interface ExceptionModel {
   code: string;

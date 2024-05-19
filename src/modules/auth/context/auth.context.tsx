@@ -69,7 +69,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({
     if (token) {
       loadAuthInterseptors(token.access);
     }
-  }, []);
+  }, [token]);
 
   return (
     <AuthContext.Provider
