@@ -4,9 +4,15 @@ interface Props {
   label: string;
   value: string;
   isLoading: boolean;
+  "aria-label"?: string;
 }
 
-export const ProfileField: React.FC<Props> = ({ label, value, isLoading }) => {
+export const ProfileField: React.FC<Props> = ({
+  label,
+  value,
+  isLoading,
+  ...props
+}) => {
   if (isLoading) {
     return (
       <div className="flex flex-col">
@@ -21,7 +27,12 @@ export const ProfileField: React.FC<Props> = ({ label, value, isLoading }) => {
       <p className="mb-1">
         Your <span className="font-bold font-nunito">{label}</span>
       </p>
-      <p className="p-3 bg-base-100 rounded-md font-nunito">{value}</p>
+      <p
+        aria-label={`${props["aria-label"]}-value`}
+        className="p-3 bg-base-100 rounded-md font-nunito"
+      >
+        {value}
+      </p>
     </div>
   );
 };

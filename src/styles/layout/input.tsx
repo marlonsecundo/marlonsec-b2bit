@@ -10,11 +10,13 @@ interface Props
   label?: React.ReactNode;
   containerClass?: string;
   error?: string;
+
+  "aria-label": string;
 }
 
-export const Input: React.FC<Props> = (props) => {
+export const Input: React.FC<Props> = ({ error, containerClass, ...props }) => {
   return (
-    <div className={twMerge("flex flex-col rounded", props.containerClass)}>
+    <div className={twMerge("flex flex-col rounded", containerClass)}>
       {props.label && <div className="mb-1">{props.label}</div>}
 
       <input
@@ -25,9 +27,9 @@ export const Input: React.FC<Props> = (props) => {
         )}
       ></input>
 
-      {props.error && (
-        <div className="label">
-          <span className="label-text-alt text-error">{props.error}</span>
+      {error && (
+        <div title={props["aria-label"] + "-label-error"} className="label">
+          <span className="label-text-alt text-error">{error}</span>
         </div>
       )}
     </div>

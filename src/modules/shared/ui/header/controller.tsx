@@ -1,4 +1,4 @@
-import { useAuthContext } from "modules/auth/context/auth.context";
+import { useAuthContext } from "@/modules/auth/context/auth.context";
 import { useNavigate, useNavigation } from "react-router-dom";
 
 export function useController() {

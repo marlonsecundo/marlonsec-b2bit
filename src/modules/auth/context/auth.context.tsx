@@ -9,8 +9,8 @@ import {
 import { UserModel } from "../models/user.model";
 import { AuthToken } from "../models/auth-token.model";
 import { UserAuthModel } from "../models/user-auth.model";
-import { api } from "modules/api";
-import { withAuthInterseptors } from "modules/api/interseptors/auth.interseptor";
+import { api } from "@/modules/api";
+import { withAuthInterseptors } from "@/modules/api/interseptors/auth.interseptor";
 
 interface AuthContextProps {
   user?: UserModel;

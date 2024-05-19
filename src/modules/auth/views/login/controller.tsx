@@ -1,17 +1,17 @@
-import { CreateLoginRequest } from "modules/auth/mutations/types";
+import { CreateLoginRequest } from "@/modules/auth/mutations/types";
 import { FormSubmitHandler, useForm } from "react-hook-form";
 import { joiResolver } from "@hookform/resolvers/joi";
-import { createLoginSchema } from "modules/auth/mutations/schemas/create-login.schema";
-import { useAuthMutation } from "modules/auth/mutations/auth.mutation";
-import { useAuthContext } from "modules/auth/context/auth.context";
+import { createLoginSchema } from "@/modules/auth/mutations/schemas/create-login.schema";
+import { useAuthMutation } from "@/modules/auth/mutations/auth.mutation";
+import { useAuthContext } from "@/modules/auth/context/auth.context";
 import { useState } from "react";
-import { Exception } from "modules/shared/models/error.model";
+import { Exception } from "@/modules/shared/models/error.model";
 
 export function useController() {
   const form = useForm<CreateLoginRequest>({
     defaultValues: {
-      email: "cliente@youdrive.com",
-      password: "password",
+      email: "",
+      password: "",
     },
     resolver: joiResolver(createLoginSchema),
   });

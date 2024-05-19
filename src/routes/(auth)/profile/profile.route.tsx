@@ -1,5 +1,5 @@
-import { ProfileView } from "modules/profile/view/profile/profile.view";
-import { PrivateRoute } from "modules/shared/core/private-route";
+import { ProfileView } from "@/modules/profile/view/profile/profile.view";
+import { PrivateRoute } from "@/modules/shared/core/private-route";
 import React from "react";
 
 export const ProfileRoute: React.FC = () => {

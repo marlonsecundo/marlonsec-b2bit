@@ -1,4 +1,4 @@
-import { LoginView } from "modules/auth/views/login/login.view";
+import { LoginView } from "@/modules/auth/views/login/login.view";
 import React from "react";
 import { Route } from "react-router-dom";
 

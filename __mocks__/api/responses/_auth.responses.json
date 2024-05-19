@@ -1,0 +1,24 @@
+{
+  "/auth/login/": {
+    "user": {
+      "id": 4,
+      "name": "Cliente",
+      "email": "cliente@youdrive.com",
+      "is_active": true,
+      "avatar": {
+        "id": 75,
+        "high": "https://you-drive-homologation-bucket.s3.amazonaws.com/media/images/30f2ade090db49d9a3dc7594a778ffa4_high.png",
+        "medium": "https://you-drive-homologation-bucket.s3.amazonaws.com/media/images/30f2ade090db49d9a3dc7594a778ffa4_medium.png",
+        "low": "https://you-drive-homologation-bucket.s3.amazonaws.com/media/images/30f2ade090db49d9a3dc7594a778ffa4_low.png"
+      },
+      "type": "StoreUser",
+      "created": "2023-09-20T11:42:54.515946-03:00",
+      "modified": "2024-05-18T20:20:57.721140-03:00",
+      "role": "OWNER"
+    },
+    "tokens": {
+      "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzYxMDQ2MSwiaWF0IjoxNzE2MDc0NDYxLCJqdGkiOiIyZmE1NDg5ZDdjMDM0OTFlYTdmMTA4OWVmYWU2OTc3MyIsInVzZXJfaWQiOjR9.gpm3S21Z4rjM_R8-pRz4QMDDFrsRbMeqTzEf0tfSbMI",
+      "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE2MTYwODYxLCJpYXQiOjE3MTYwNzQ0NjEsImp0aSI6IjYwNzZiMTMzZThjOTQzOGNhYWQ5YjlmYjNjNTNjOTA0IiwidXNlcl9pZCI6NH0.oR9rinXN4jfQIx-SWHOm_3o88HMcsYb4-g0rBh4z-WE"
+    }
+  }
+}

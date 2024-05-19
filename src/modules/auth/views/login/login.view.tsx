@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
-import b2bitLogo from "assets/icons/b2bit-logo.png";
-import { Card, Button, Input, Label } from "styles/layout";
+import { Card, Button, Input, Label } from "@/styles/layout";
 import { useController } from "./controller";
 import { Controller, Form } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import alertSvg from "assets/icons/alert.svg";
+import b2bitLogo from "../../../../assets/icons/b2bit-logo.png";
+import alertSvg from "../../../../assets/icons/alert.svg";
 
 export const LoginView: React.FC = () => {
   const { form, handleFormSubmit, isLoading, isAuthenticated, error } =
@@ -23,17 +23,22 @@ export const LoginView: React.FC = () => {
 
         {error && (
           <div role="alert" className="alert alert-warning rounded-sm mb-5">
-            <img src={alertSvg} className="w-6"></img>
+            {/* <img src={alertSvg} className="w-6"></img> */}
             <span className="text-sm">{error?.message}</span>
           </div>
         )}
 
-        <Form control={form.control} onSubmit={handleFormSubmit}>
+        <Form
+          aria-label="login-form"
+          control={form.control}
+          onSubmit={handleFormSubmit}
+        >
           <Controller
             control={form.control}
             name="email"
             render={({ field, fieldState }) => (
               <Input
+                aria-label="email-input"
                 label={<Label>E-mail</Label>}
                 placeholder="@gmail.com"
                 type="text"
@@ -51,9 +56,12 @@ export const LoginView: React.FC = () => {
             name="password"
             render={({ field, fieldState }) => (
               <Input
+                aria-label="password-input"
+                data-testid="password-input"
                 label={<Label>Password</Label>}
                 placeholder="********"
-                type="password"
+                type="text"
+                className="text-password"
                 value={field.value}
                 onChange={field.onChange}
                 error={fieldState.error?.message}
@@ -62,6 +70,7 @@ export const LoginView: React.FC = () => {
           />
 
           <Button
+            aria-label="submit-button"
             disabled={isLoading}
             isLoading={isLoading}
             type="submit"

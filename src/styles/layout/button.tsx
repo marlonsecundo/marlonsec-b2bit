@@ -11,13 +11,11 @@ interface Props
   isLoading?: boolean;
 }
 
-export const Button: React.FC<Props> = (props) => {
+export const Button: React.FC<Props> = ({ text, isLoading, ...props }) => {
   const content = (
     <>
-      {props.text && (
-        <p className="font-nunito text-lg font-bold text-neutral">
-          {props.text}
-        </p>
+      {text && (
+        <p className="font-nunito text-lg font-bold text-neutral">{text}</p>
       )}
       {props.children}
     </>
@@ -31,8 +29,8 @@ export const Button: React.FC<Props> = (props) => {
         props.className
       )}
     >
-      {!props.isLoading && content}
-      {props.isLoading && <Spinner></Spinner>}
+      {!isLoading && content}
+      {isLoading && <Spinner></Spinner>}
     </button>
   );
 };

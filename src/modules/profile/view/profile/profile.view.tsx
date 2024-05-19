@@ -1,9 +1,9 @@
 import React from "react";
-import { Card, Input } from "styles/layout";
+import { Card, Input } from "@/styles/layout";
 import { useController } from "./controller";
 import { ProfileField } from "./ui/profile-field";
-import { Header } from "modules/shared/ui/header/header";
-import { WithSkeleton } from "modules/shared/hoc/with-skeleton.hoc";
+import { Header } from "@/modules/shared/ui/header/header";
+import { WithSkeleton } from "@/modules/shared/hoc/with-skeleton.hoc";
 import { profileImageSkeleton } from "./skeleton";
 
 export const ProfileView: React.FC = () => {
@@ -37,6 +37,7 @@ export const ProfileView: React.FC = () => {
           <div className="mt-5"></div>
 
           <ProfileField
+            aria-label="email-field"
             isLoading={isLoading}
             label="E-mail"
             value={profile?.email ?? ""}

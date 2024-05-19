@@ -1,6 +1,6 @@
-import { api } from "modules/api";
+import { api } from "@/modules/api";
 import { CreateLoginRequest, CreateLoginResponse } from "./types";
-import { useAxiosMutation } from "modules/shared/hooks/use-axios-mutation";
+import { useAxiosMutation } from "@/modules/shared/hooks/use-axios-mutation";
 
 export const useAuthMutation = () => {
   const createLoginMutation = useAxiosMutation<

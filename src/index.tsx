@@ -4,9 +4,9 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { RootRouter } from "./routes";
 import { BrowserRouter } from "react-router-dom";
-import { AuthProvider } from "modules/auth/context/auth.context";
+import { AuthProvider } from "@/modules/auth/context/auth.context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { UserAuthModel } from "modules/auth/models/user-auth.model";
+import { UserAuthModel } from "@/modules/auth/models/user-auth.model";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
