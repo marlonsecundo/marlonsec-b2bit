@@ -26,6 +26,11 @@ jobs:
         run: npm run build
 
       - uses: actions/checkout@master
+
+      - name: Print Current Directory
+        run: |
+          pwd
+
       - uses: shallwefootball/s3-upload-action@master
         with:
           aws_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
