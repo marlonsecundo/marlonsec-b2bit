@@ -28,7 +28,7 @@ export const Spinner: React.FC<Props> = (props) => {
   return (
     <svg
       className={twMerge(
-        "animate-spin h-5 w-5 mr-3 fill-neutral",
+        "animate-spin h-5 w-5 mr-3 fill-neutral  dark:text-neutral-content",
         getSize(props.size),
         props.className
       )}

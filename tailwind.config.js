@@ -2,6 +2,8 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
 
+  darkMode: "selector",
+
   theme: {
     extend: {
       fontFamily: {
@@ -27,7 +29,14 @@ module.exports = {
           "base-100": "#f1f1f1",
           "--base-secondary": "#f1f5f9",
         },
-        dark: {},
+        dark: {
+          primary: "#0d3b66",
+          secondary: "#ffc107",
+          neutral: "#121212",
+          "neutral-content": "#e0e0e0",
+          "base-100": "#1e1e1e",
+          "--base-secondary": "#252525",
+        },
       },
     ],
   },

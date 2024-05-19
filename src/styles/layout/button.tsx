@@ -15,7 +15,9 @@ export const Button: React.FC<Props> = ({ text, isLoading, ...props }) => {
   const content = (
     <>
       {text && (
-        <p className="font-nunito text-lg font-bold text-neutral">{text}</p>
+        <p className="font-nunito text-lg font-bold text-neutral dark:text-neutral-content">
+          {text}
+        </p>
       )}
       {props.children}
     </>

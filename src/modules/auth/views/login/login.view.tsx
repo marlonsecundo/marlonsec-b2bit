@@ -4,6 +4,7 @@ import { useController } from "./controller";
 import { Controller, Form } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import b2bitLogo from "../../../../assets/icons/b2bit-logo.png";
+import { Header } from "@/modules/shared/ui/header/header";
 
 export const LoginView: React.FC = () => {
   const { form, handleFormSubmit, isLoading, isAuthenticated, error } =
@@ -17,7 +18,8 @@ export const LoginView: React.FC = () => {
 
   return (
     <main className="bg-base-200 h-screen w-screen flex items-center justify-center">
-      <Card className="flex flex-col">
+      <Header></Header>
+      <Card className="flex flex-col mx-10 md:mx-0">
         <img
           alt="b2bit-logo"
           src={b2bitLogo}
