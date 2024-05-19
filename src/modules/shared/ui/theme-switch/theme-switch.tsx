@@ -15,7 +15,7 @@ export const ThemeSwitch: React.FC = () => {
       />
 
       <svg
-        className="swap-off fill-current w-10 h-10"
+        className="swap-on fill-secondary w-10 h-10"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >
@@ -23,7 +23,7 @@ export const ThemeSwitch: React.FC = () => {
       </svg>
 
       <svg
-        className="swap-on fill-current w-10 h-10"
+        className="swap-off fill-primary w-10 h-10"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
       >

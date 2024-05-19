@@ -15,6 +15,15 @@ module.exports = {
       boxShadow: {
         card: `box-shadow: 0px 0px 64px 0px #00000040`,
       },
+      keyframes: {
+        bounceY: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(50px)" },
+        },
+      },
+      animation: {
+        bounceY: "bounceY 1s ease-in-out 1s forwards",
+      },
     },
   },
 

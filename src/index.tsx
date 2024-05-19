@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "@/modules/auth/context/auth.context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { UserAuthModel } from "@/modules/auth/models/user-auth.model";
+import NetStatus from "./modules/net/ui/net-status/net-status.index";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -32,6 +33,7 @@ root.render(
         <BrowserRouter>
           <RootRouter></RootRouter>
         </BrowserRouter>
+        <NetStatus></NetStatus>
       </AuthProvider>
     </QueryClientProvider>
   </React.StrictMode>
