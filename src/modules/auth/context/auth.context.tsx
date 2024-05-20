@@ -61,6 +61,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({
   const logoutUser = () => {
     unloadAuthInterseptors();
     setAuthData({ user: undefined, tokens: undefined });
+    localStorage.removeItem("userAuth");
   };
 
   const isAuthenticated = useMemo(() => !!(user && token), [user, token]);

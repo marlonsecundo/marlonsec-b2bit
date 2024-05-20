@@ -33,7 +33,7 @@
     "test": "jest",
     "eject": "react-scripts eject",
     "e2e": "jest -c jest.config.e2e.js",
-    "prepare-e2e": "craco build && yarn serve -s build -p 3001"
+    "prepare-e2e": "craco build && yarn serve -s build"
   },
   "eslintConfig": {
     "extends": [

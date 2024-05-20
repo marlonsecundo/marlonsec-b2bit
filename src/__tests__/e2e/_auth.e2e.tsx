@@ -14,7 +14,7 @@ describe("E2E: Auth Module", () => {
   });
 
   it("should login and show profile", async () => {
-    await page.goto("http://localhost:3001", { waitUntil: "networkidle0" });
+    await page.goto("http://localhost:3000", { waitUntil: "networkidle0" });
 
     await page.type('[aria-label="email-input"]', "cliente@youdrive.com");
     await page.type('[aria-label="password-input"]', "password");
@@ -39,6 +39,8 @@ describe("E2E: Auth Module", () => {
     await page.waitForSelector('[aria-label="login-form"]', {
       timeout: 1000,
     });
+
+    await new Promise((r) => setTimeout(r, 1000));
   });
 
   afterAll(() => browser.close());
