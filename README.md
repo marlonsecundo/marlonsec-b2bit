@@ -28,6 +28,8 @@ http://b2bit.s3-website.us-east-2.amazonaws.com/
 - Node.js == 18.12.0
 - yarn >= 1.22.19
 
+#### OBS: Executar num SO Linux se possível.
+
 <br/>
 
 <div style="padding: 15px; border: 1px solid yellow; padding-bottom: 0px">
@@ -78,19 +80,16 @@ yarn test
 
 1.a - Execute uma instância do projeto conforme o tutorial.
 
-```
+```bash
 yarn start
-```
 
-1.b - Ou se preferir faça uma build e execute ela.
-
-```
+# 1.b - Ou se preferir faça uma build e execute ela.
 yarn prepare-e2e
 ```
 
-2 - Execute os testes e2e.
+2 - Abra uma nova janela no terminal e execute os testes e2e.
 
-```
+```bash
 yarn e2e
 ```
 
@@ -103,7 +102,7 @@ yarn e2e
 * ### Internacionalização
 * ### Skeleton Feedback
 * ### Internet Status Feedback
-* ### Github Actions
+* ### Deploy com Github Actions e S3
 
 <br />
 
@@ -121,6 +120,7 @@ yarn e2e
 - Typescript
 - Tailwind
 - React Query
+- Jest
 - React Testing Library
 - Puppeteer
 - Daisyui
