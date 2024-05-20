@@ -32,9 +32,10 @@ http://b2bit.s3-website.us-east-2.amazonaws.com/
 
 <br/>
 
-<div style="padding: 15px; border: 1px solid yellow; padding-bottom: 0px">
-    <p style="">As variáveis de ambiente do projeto já estão configuradas no repositório por motivos de praticidade!</p>
-</div>
+> [!WARNING]\
+> By default, the stats card only shows statistics like stars, commits, and pull requests from public repositories. To show private statistics on the stats card, you should [deploy your own instance](#deploy-on-your-own) using your own GitHub API token.
+
+> As variáveis de ambiente do projeto já estão configuradas no repositório por motivos de praticidade!
 
 <br />
 
