@@ -100,7 +100,7 @@ yarn e2e
 - ### Controle de Tema
 
 * ### Internacionalização
-* ### Skeleton Feedback
+* ### Loading Skeleton Feedback
 * ### Internet Status Feedback
 * ### Deploy com Github Actions e S3
 
