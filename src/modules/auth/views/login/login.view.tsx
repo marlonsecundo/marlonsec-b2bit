@@ -20,9 +20,9 @@ export const LoginView: React.FC = () => {
   }, [isAuthenticated]);
 
   return (
-    <main className="bg-base-200 h-screen w-screen flex items-center justify-center">
+    <main className="bg-base-200 h-screen w-screen flex items-center justify-center ">
       <Header></Header>
-      <Card className="flex flex-col mx-10 md:mx-0">
+      <Card className="flex flex-col mx-10 md:mx-0 height-md:scale-75">
         <img
           alt="b2bit-logo"
           src={b2bitLogo}

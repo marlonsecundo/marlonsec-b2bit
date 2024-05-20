@@ -6,6 +6,9 @@ module.exports = {
 
   theme: {
     extend: {
+      screens: {
+        "height-md": { raw: "(max-height: 670px)" },
+      },
       fontFamily: {
         nunito: ["Nunito"],
       },
