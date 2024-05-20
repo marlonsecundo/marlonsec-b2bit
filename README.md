@@ -6,10 +6,7 @@
 
 # Marlon Secundo - b2bit
 
-Projeto de Seleção: <br/>
-https://doc.clickup.com/3020915/p/h/2w63k-48543/4fbf8b7f844323d
 
-<br />
 
 ## 🌐 Demo
 
@@ -124,3 +121,9 @@ yarn e2e
 ## 📩 Contato
 
 marlon_secundo@outlook.com
+
+---
+Projeto de Seleção: <br/>
+https://doc.clickup.com/3020915/p/h/2w63k-48543/4fbf8b7f844323d
+
+<br />
