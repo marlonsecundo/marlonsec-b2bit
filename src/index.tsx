@@ -8,10 +8,13 @@ import { AuthProvider } from "@/modules/auth/context/auth.context";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { UserAuthModel } from "@/modules/auth/models/user-auth.model";
 import NetStatus from "./modules/net/ui/net-status/net-status.index";
+import { initI18n } from "./modules/shared/core/i18next";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+initI18n();
 
 const queryClient = new QueryClient({
   defaultOptions: { queries: { refetchOnWindowFocus: false } },

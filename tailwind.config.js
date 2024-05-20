@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       animation: {
-        bounceY: "bounceY 1s ease-in-out 1s forwards",
+        bounceY: "bounceY 1s ease-in-out 2s forwards",
       },
     },
   },

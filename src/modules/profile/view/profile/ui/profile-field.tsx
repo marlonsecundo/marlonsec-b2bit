@@ -25,7 +25,7 @@ export const ProfileField: React.FC<Props> = ({
   return (
     <div>
       <p className="mb-1">
-        Your <span className="font-bold font-nunito">{label}</span>
+        <span className="font-bold font-nunito">{label}</span>
       </p>
       <p
         aria-label={`${props["aria-label"]}-value`}

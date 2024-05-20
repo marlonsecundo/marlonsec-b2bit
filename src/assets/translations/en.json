@@ -1,0 +1,23 @@
+{
+  "shared": {},
+  "auth": {
+    "email": "E-mail",
+    "password": "Password",
+    "signIn": "Sign In",
+    "logout": "Logout"
+  },
+  "profile": {
+    "picture": "Profile Picture",
+    "labelName": "Your Name",
+    "labelEmail": "Your E-mail"
+  },
+  "not-found": {
+    "text": "Oops... Page not found!",
+    "goBack": "Go Back"
+  },
+  "joi": {
+    "string.empty": "Cannot be empty",
+    "string.email": "Email not valid",
+    "any.required": "Required field"
+  }
+}

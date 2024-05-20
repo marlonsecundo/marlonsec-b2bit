@@ -6,6 +6,7 @@ import { useAuthMutation } from "@/modules/auth/mutations/auth.mutation";
 import { useAuthContext } from "@/modules/auth/context/auth.context";
 import { useState } from "react";
 import { Exception } from "@/modules/shared/models/error.model";
+import { defaultJoiOptions } from "@/modules/shared/core/joi";
 
 export function useController() {
   const form = useForm<CreateLoginRequest>({
@@ -13,7 +14,7 @@ export function useController() {
       email: "",
       password: "",
     },
-    resolver: joiResolver(createLoginSchema),
+    resolver: joiResolver(createLoginSchema, defaultJoiOptions()),
   });
 
   const { createLoginMutation } = useAuthMutation();

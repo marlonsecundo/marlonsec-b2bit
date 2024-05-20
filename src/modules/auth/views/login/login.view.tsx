@@ -5,12 +5,15 @@ import { Controller, Form } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import b2bitLogo from "../../../../assets/icons/b2bit-logo.png";
 import { Header } from "@/modules/shared/ui/header/header";
+import { useTranslation } from "react-i18next";
 
 export const LoginView: React.FC = () => {
   const { form, handleFormSubmit, isLoading, isAuthenticated, error } =
     useController();
 
   const navigate = useNavigate();
+
+  const { t } = useTranslation();
 
   useEffect(() => {
     isAuthenticated && navigate({ pathname: "/profile" }, { replace: true });
@@ -63,7 +66,7 @@ export const LoginView: React.FC = () => {
               <Input
                 aria-label="password-input"
                 data-testid="password-input"
-                label={<Label>Password</Label>}
+                label={<Label>{t("auth.password")}</Label>}
                 placeholder="********"
                 type="text"
                 className="text-password"
@@ -81,7 +84,7 @@ export const LoginView: React.FC = () => {
             isLoading={isLoading}
             type="submit"
             className="w-full mt-4"
-            text="Sign In"
+            text={t("auth.signIn")}
           ></Button>
         </Form>
       </Card>

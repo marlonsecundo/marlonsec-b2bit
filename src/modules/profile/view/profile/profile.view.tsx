@@ -5,9 +5,11 @@ import { ProfileField } from "./ui/profile-field";
 import { Header } from "@/modules/shared/ui/header/header";
 import { WithSkeleton } from "@/modules/shared/hoc/with-skeleton.hoc";
 import { profileImageSkeleton } from "./skeleton";
+import { useTranslation } from "react-i18next";
 
 export const ProfileView: React.FC = () => {
   const controller = useController();
+  const { t } = useTranslation();
   const { profile, isLoading } = controller;
 
   return (
@@ -16,7 +18,9 @@ export const ProfileView: React.FC = () => {
       <main className="bg-base-secondary flex h-full justify-center items-center">
         <Card className="p-8 px-6 d-flex flex-col min-w-[40%]">
           <div className="flex justify-center items-center flex-col">
-            <p className="font-nunito font-semibold text-sm">Profile Picture</p>
+            <p className="font-nunito font-semibold text-sm">
+              {t("profile.picture")}
+            </p>
 
             <WithSkeleton isLoading={isLoading} skeleton={profileImageSkeleton}>
               <img
@@ -31,7 +35,7 @@ export const ProfileView: React.FC = () => {
 
           <ProfileField
             isLoading={isLoading}
-            label="Name"
+            label={t("profile.labelName")}
             value={profile?.name ?? ""}
           ></ProfileField>
 
@@ -40,7 +44,7 @@ export const ProfileView: React.FC = () => {
           <ProfileField
             aria-label="email-field"
             isLoading={isLoading}
-            label="E-mail"
+            label={t("profile.labelEmail")}
             value={profile?.email ?? ""}
           ></ProfileField>
         </Card>

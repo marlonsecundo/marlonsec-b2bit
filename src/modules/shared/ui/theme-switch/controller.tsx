@@ -18,9 +18,22 @@ export function useController() {
     document.documentElement.classList.add("dark");
   };
 
+  const changeInFireFox = () => {
+    document.documentElement.setAttribute("data-theme", userTheme);
+  };
+
   useEffect(() => {
-    document.documentElement.classList.remove("dark");
+    if (userTheme === "light")
+      document.documentElement.classList.remove("dark");
+    else {
+      document.documentElement.classList.add("dark");
+    }
   }, []);
+
+  // daisy ui theme controller doest support firefox new versions
+  useEffect(() => {
+    changeInFireFox();
+  }, [userTheme]);
 
   return { onThemeCheckChange, userTheme };
 }
