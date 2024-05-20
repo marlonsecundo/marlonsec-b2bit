@@ -47,6 +47,9 @@ describe("UT: login.view", () => {
   it("login form should validate user password required", async () => {
     // act
     await act(async () => {
+      fireEvent.change(emailInput, {
+        target: { value: "email@email.com" },
+      });
       fireEvent.change(passwordInput, {
         target: { value: "" },
       });
