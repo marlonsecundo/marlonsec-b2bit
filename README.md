@@ -103,6 +103,7 @@ yarn e2e
 * ### Internacionalização
 * ### Skeleton Feedback
 * ### Internet Status Feedback
+* ### Github Actions
 
 <br />
 
@@ -124,6 +125,8 @@ yarn e2e
 - Puppeteer
 - Daisyui
 - Intl
+- Amazon S3
+- Github Actions
 
 ## 📩 Contato
 
