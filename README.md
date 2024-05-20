@@ -17,6 +17,10 @@ Link com o projeto em funcionamento:
 
 http://b2bit.s3-website.us-east-2.amazonaws.com/
 
+<div style="padding: 15px; border: 1px solid blue; padding-bottom: 0px">
+    <p style="">Ao tentar rodar no celular, renomeie <b>https</b> para <b>http</b></p>
+</div>
+
 <br />
 
 ## ⚙️ Requerimentos
@@ -91,6 +95,35 @@ yarn e2e
 ```
 
 <br />
+
+## ⭐ Funcionalidades Adicionais
+
+- ### Controle de Tema
+
+* ### Internacionalização
+* ### Skeleton Feedback
+* ### Internet Status Feedback
+
+<br />
+
+## 💡 Padrões e Conceitos
+
+- ### Estrutura por Módulos
+- ### Container Presentation
+- ### Design System
+
+<br />
+
+## 👨🏻‍💻 Tecnologias
+
+- ReactJs
+- Typescript
+- Tailwind
+- React Query
+- React Testing Library
+- Puppeteer
+- Daisyui
+- Intl
 
 ## 📩 Contato
 
