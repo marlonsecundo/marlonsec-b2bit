@@ -32,7 +32,8 @@
     "build": "craco build",
     "test": "jest",
     "eject": "react-scripts eject",
-    "e2e": "jest -c jest.config.e2e.js"
+    "e2e": "jest -c jest.config.e2e.js",
+    "prepare-e2e": "craco build && yarn serve -s build -p 3001"
   },
   "eslintConfig": {
     "extends": [
@@ -69,6 +70,7 @@
     "puppeteer": "^22.9.0",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-user-preferences": "^2.4.1",
+    "serve": "^14.2.3",
     "tailwindcss": "^3.4.3",
     "ts-jest": "^29.1.2"
   }
