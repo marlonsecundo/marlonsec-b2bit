@@ -19,10 +19,14 @@ jobs:
         with:
           node-version: "18.12.0"
 
+      - name: Install dependencies
+        run: npm install
+        
       - name: Test UI and CP
         run: npm test
 
   build:
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
