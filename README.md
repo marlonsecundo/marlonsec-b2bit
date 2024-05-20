@@ -30,9 +30,7 @@ http://b2bit.s3-website.us-east-2.amazonaws.com/
 
 #### OBS: Executar num SO Linux se possível.
 
-<br/>
-
-> [!WARNING]\
+> [!NOTE]\
 > As variáveis de ambiente do projeto já estão configuradas no repositório por motivos de praticidade!
 
 <br />
@@ -45,8 +43,6 @@ http://b2bit.s3-website.us-east-2.amazonaws.com/
 git clone https://github.com/marlonsecundo/marlonsec-b2bit
 ```
 
-<br/>
-
 2 - Entre na raíz do projeto e instale as depêndencias
 
 ```bash
@@ -54,8 +50,6 @@ cd marlonsec-b2bit
 
 yarn
 ```
-
-<br/>
 
 3 - Execute o projeto no modo desenvolvimento
 
